@@ -243,10 +243,11 @@ nav .resume-button:hover {
 }
 
 .enter-done {
-    max-width: 480px;
+    max-width: 600px;
     line-height: 1.3;
     color: var(--slate);
     margin-bottom: 3rem;
+    font-size: var(--fz-s);
 }
 
 .enter-done a {
