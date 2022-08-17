@@ -212,8 +212,14 @@ nav .resume-button:hover {
 /* SECTION HERO */
 .hero {
     height: 100vh;
-    margin-top: 14rem;
+    display: flex;
+    align-items: center;
 }
+
+.hero-content {
+    min-height: 50vh;
+}
+
 .hero h1 {
     font-family: var(--font-mono);
     font-size: var(--fz-s);
