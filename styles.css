@@ -162,6 +162,11 @@ nav .resume-button:hover {
 
 .orientation-left ul li {
     margin-bottom: 1.8rem;
+    transition: var(--transition);
+}
+
+.orientation-left ul li:hover {
+    transform: translateY(-10px);
 }
 
 .orientation-left ul a {
@@ -198,6 +203,7 @@ nav .resume-button:hover {
 
 .orientation-right a:hover {
     color: var(--green);
+    transform: translateY(-10px);
 }
 
 .orientation-right::after {
@@ -245,7 +251,7 @@ section p {
 .hero h2 {
     font-family: var(--font-sans);
     font-weight: 800;
-    color: var(--light-slate);
+    color: white
 }
 
 .hero h3 {
@@ -274,11 +280,7 @@ section p {
     text-decoration: underline;
 }
 
-/* About me */
-.about h2 {
-    display: flex;
-    flex-direction: column;
-}
+/* SECTION ABOUT-ME */
 
 .about h2::before {
     position: relative;
@@ -292,11 +294,63 @@ section p {
     font-weight: 400;
 }
 
+.about h2 {
+    display: flex;
+    align-items: flex-end;
+}
+.about h2::after {
+    content: "";
+    background-color: var(--light-slate);
+    display: block;
+    width: 300px;
+    height: 1px;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.about-photo img {
+    width: 300px;
+    height: 350px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    position: absolute;
+    border: 1px solid black;
+}
+
+.about-photo .green-color {
+    background-color: var(--green);
+    height: 350px;
+    width: 300px;
+    position: relative;
+    display: block;
+    transition: var(--transition);
+    opacity: 50%;
+    border-radius: var(--border-radius);
+}
+
+.about-photo .green-color:hover {
+    opacity: 0%;
+}
+
+
 .about .skill-list {
     list-style-type: none;
     color: var(--slate);
     font-family: var(--font-sans);
     font-size: var(--fz-sm);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.skill-list li {
+    line-height: 2;
 }
 
 .about .skill-list li::before {
@@ -305,3 +359,62 @@ section p {
     color: var(--green);
 }
 
+/* SECTION CONTACT  */
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+
+.contact h2 {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: var(--fz-s);
+    margin-bottom: 0.5rem;
+}
+
+.contact h3 {
+    font-family: var(--font-sans);
+    color: white;
+    font-size: var(--fz-heading);
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    width: 480px;
+    font-size: var(--fz-xs);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact div .btn {
+    padding: 0.8rem 1rem;
+    font-size: var(--fz-xs);
+}
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+footer p {
+    color: var(--slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--slate);
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--green);
+
+}
