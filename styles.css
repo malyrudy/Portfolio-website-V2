@@ -215,6 +215,9 @@ nav .resume-button:hover {
 }
 
 /* SECTION */
+section {
+    padding-top: 2rem;
+}
 section h2 {
     font-size: var(--fz-heading);
     color: var(--lightest-slate);
