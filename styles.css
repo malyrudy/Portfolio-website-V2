@@ -217,6 +217,7 @@ nav .resume-button:hover {
 /* SECTION */
 section {
     padding-top: 2rem;
+    padding-bottom: 10rem;
 }
 section h2 {
     font-size: var(--fz-heading);
@@ -303,7 +304,7 @@ section p {
 }
 .about h2::after {
     content: "";
-    background-color: var(--light-slate);
+    background-color: var(--lightest-navy);
     display: block;
     width: 300px;
     height: 1px;
@@ -324,6 +325,7 @@ section p {
     object-fit: cover;
     position: absolute;
     border: 1px solid black;
+    position: absolute;
 }
 
 .about-photo .green-color {
@@ -360,6 +362,203 @@ section p {
     content: "▶";
     font-size: var(--fz-sm);
     color: var(--green);
+}
+
+/* SECTION WHERE-I-WORKED */
+.my-work {
+    padding-left: 10rem;
+}
+
+.my-work h2::before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section 1;
+    content: "02" ".";
+    margin-right: 10px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fz-md),3vw,var(--fz-xl));
+    font-weight: 400;
+    align-self: flex-end;
+}
+.my-work h2 {
+    display: flex;
+}
+
+.my-work h2::after {
+    content: "";
+    background-color: var(--lightest-navy);
+    display: block;
+    width: 200px;
+    height: 1px;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.my-work .flex {
+    display: flex;
+}
+
+.my-work .flex .job-panel {
+    width: 100px;
+    margin-right: 1rem;
+}
+
+.my-work .flex .job-panel button {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-left: 2px solid var(--green);
+    color: var(--slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-m);
+    padding: 0.4rem;
+    transition: var(--transition);
+}
+
+.my-work .flex .job-panel button:hover {
+    color: var(--green);
+    background-color: var(--green-tint);
+    cursor: pointer;
+}
+
+.my-work .flex .work-tab h3 {
+    font-family: var(--font-sans);
+    font-size: var(--fz-lg);
+    color: var(--light-slate);
+    margin-bottom: 0.1rem;
+}
+
+.my-work .flex .work-tab h3 span {
+    color: var(--green);
+}
+
+.my-work .flex .work-tab h3 a {
+    text-decoration: none;
+}
+
+.my-work .flex .work-tab p {
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+}
+
+.my-work .flex .work-tab .work-info {
+    list-style: none;
+    color: var(--slate);
+    font-family: var(--font-sans);
+    font-size: var(--fz-sm);
+    line-height: 1.5;
+}
+
+.my-work .flex .work-tab .work-info li::before {
+    content: "▶";
+    color: var(--green);
+    margin-right: 0.5rem;
+    font-size: 10px;
+}
+
+.my-work .flex .work-tab .work-info li {
+    margin-bottom: 0.5rem;
+}
+
+/* SECTION WORK-PROJECT */
+
+.work ul {
+    list-style: none;
+    display: grid;
+    row-gap: 6rem;
+}
+
+.work ul li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 1rem;
+
+}
+
+.work h2 {
+    display: flex;
+}
+
+.work h2::before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section 1;
+    content: "03" ".";
+    margin-right: 10px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fz-md),3vw,var(--fz-xl));
+    font-weight: 400;
+    align-self: flex-end;
+}
+
+.work h2::after {
+    content: "";
+    background-color: var(--lightest-navy);
+    display: block;
+    width: 200px;
+    height: 1px;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.work .project-content {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.work .project-content .project-featured p {
+    font-family: var(--font-mono);
+    color: var(--green);
+    margin-bottom: 0.5rem;
+}
+
+.work .project-content .project-name {
+    color: var(--lightest-slate);
+    font-family: var(--font-sans);
+    font-size: var(--fz-lg);
+}
+
+.work .project-content .project-info {
+    background: var(--light-navy);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.work .project-content .project-language-used ul {
+    display: flex;
+    justify-content: right;
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+    margin-bottom: 1rem;
+}
+
+.work .project-content .project-language-used ul li {
+    color: var(--slate);
+    display: flex;
+    margin-left: 1.5rem;
+}
+
+.work .project-content .project-links {
+    display: flex;
+    justify-content: right;
+}
+
+.work .project-content .project-links a {
+    color: var(--slate);
+}
+
+.work .project-content .project-links a:first-child {
+    margin-right: 1rem;
+}
+
+.work .project-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* SECTION CONTACT  */
