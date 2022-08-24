@@ -45,6 +45,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--navy);
+    color: white;
+    counter-reset: numbered-headings;
+}
+
 a {
     color: var(--green);
 }
@@ -62,15 +68,26 @@ a {
     transition: var(--transition);
 }
 
-.btn:hover {
+.btn:hover,
+nav .resume-button:hover {
     background-color: var(--green-tint);
 }
 
-body {
-    background-color: var(--navy);
-    color: white;
+.numbered-headings h2::before {
+    /* position: relative; */
+    align-self: flex-end;
+    margin-bottom: 2px;
+    counter-increment: numbered-headings;
+    content: "0" counter(numbered-headings) ".";
+    margin-right: 10px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fz-md),3vw,var(--fz-xl));
+    font-weight: 400;
 }
+
 /* Nav */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -125,10 +142,6 @@ nav .resume-button {
     border-radius: var(--border-radius);
     text-decoration: none;
     transition: var(--transition);
-}
-
-nav .resume-button:hover {
-    background-color: var(--green-tint);
 }
 
 .container {
@@ -224,6 +237,7 @@ section h2 {
     color: var(--lightest-slate);
     font-family: var(--font-sans);
     margin-bottom: 2.5rem;
+    display: flex;
 }
 
 section p {
@@ -285,18 +299,6 @@ section p {
 }
 
 /* SECTION ABOUT-ME */
-
-.about h2::before {
-    position: relative;
-    bottom: 4px;
-    counter-increment: section 1;
-    content: "0" counter(section) ".";
-    margin-right: 10px;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: clamp(var(--fz-md),3vw,var(--fz-xl));
-    font-weight: 400;
-}
 
 .about h2 {
     display: flex;
@@ -366,21 +368,9 @@ section p {
 
 /* SECTION WHERE-I-WORKED */
 .my-work {
-    padding-left: 10rem;
+    padding-left: 5rem;
 }
 
-.my-work h2::before {
-    position: relative;
-    bottom: 4px;
-    counter-increment: section 1;
-    content: "02" ".";
-    margin-right: 10px;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: clamp(var(--fz-md),3vw,var(--fz-xl));
-    font-weight: 400;
-    align-self: flex-end;
-}
 .my-work h2 {
     display: flex;
 }
@@ -466,39 +456,25 @@ section p {
 .work ul {
     list-style: none;
     display: grid;
-    row-gap: 6rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 5rem;
 }
 
 .work ul li {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    row-gap: 1rem;
-
 }
 
 .work h2 {
     display: flex;
 }
 
-.work h2::before {
-    position: relative;
-    bottom: 4px;
-    counter-increment: section 1;
-    content: "03" ".";
-    margin-right: 10px;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: clamp(var(--fz-md),3vw,var(--fz-xl));
-    font-weight: 400;
-    align-self: flex-end;
-}
-
 .work h2::after {
     content: "";
     background-color: var(--lightest-navy);
     display: block;
-    width: 200px;
+    width: 700px;
     height: 1px;
     align-self: center;
     margin-left: 20px;
@@ -549,6 +525,11 @@ section p {
 
 .work .project-content .project-links a {
     color: var(--slate);
+    transition: var(--transition);
+}
+
+.work .project-content .project-links a:hover {
+    color: var(--green);
 }
 
 .work .project-content .project-links a:first-child {
@@ -559,6 +540,7 @@ section p {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: var(--border-radius);
 }
 
 /* SECTION CONTACT  */
@@ -567,7 +549,7 @@ section p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15rem;
+    margin-bottom: 0;
 }
 
 .contact h2 {
@@ -577,16 +559,20 @@ section p {
     margin-bottom: 0.5rem;
 }
 
+.contact h2::before {
+    font-size: var(--fz-s);
+}
+
 .contact h3 {
     font-family: var(--font-sans);
     color: white;
-    font-size: var(--fz-heading);
+    font-size: 3.5rem;
     margin-bottom: 1rem;
 }
 
 .contact p {
-    width: 480px;
-    font-size: var(--fz-xs);
+    width: 650px;
+    font-size: var(--fz-s);
     text-align: center;
     margin-bottom: 3rem;
 }
