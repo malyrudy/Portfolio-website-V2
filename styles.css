@@ -49,6 +49,7 @@ body {
     background-color: var(--navy);
     color: white;
     counter-reset: numbered-headings;
+    -webkit-overflow-scrolling: auto;
 }
 
 a {
@@ -109,6 +110,7 @@ nav {
     height: 100px;
     padding: 0 2.5rem;
     background-color: var(--light-navy);
+    z-index: 999;
 }
 
 .nav-list {
@@ -160,7 +162,7 @@ nav .resume-button {
 }
 
 .container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -258,7 +260,7 @@ section h2 {
 section p {
     color: var(--slate);
     font-family: var(--font-sans);
-    font-size: 1.1rem;
+    font-size: var(--fz-md);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -268,16 +270,16 @@ section p {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .hero-content {
-    min-height: 40vh;
-    margin-left: 5rem;
+    margin-top: 20vh;
 }
 
 .hero h1 {
     font-family: var(--font-mono);
-    font-size: var(--fz-s);
+    font-size: var(--fz-xs);
     color: var(--green);
     margin-bottom: 0.5rem;
 }
@@ -290,20 +292,20 @@ section p {
 
 .hero h3 {
     color: var(--slate);
-    margin-bottom: 1rem;
+    letter-spacing: 5px;
+    margin-bottom: 1.5rem;
 }
 
 .big-heading {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .enter-done {
-    max-width: 600px;
+    max-width: 800px;
     line-height: 1.5;
     color: var(--slate);
     margin-bottom: 5rem;
-    font-size: var(--fz-lg);
 }
 
 /* SECTION ABOUT-ME */
@@ -386,7 +388,7 @@ section p {
     content: "";
     background-color: var(--lightest-navy);
     display: block;
-    width: 200px;
+    width: 150px;
     height: 1px;
     align-self: center;
     margin-left: 20px;
@@ -477,7 +479,7 @@ section p {
     content: "";
     background-color: var(--lightest-navy);
     display: block;
-    width: 700px;
+    width: 400px;
     height: 1px;
     align-self: center;
     margin-left: 20px;
@@ -487,6 +489,7 @@ section p {
     display: flex;
     flex-direction: column;
     text-align: right;
+    justify-content: center;
 }
 
 .work .project-content .project-featured p {
@@ -509,7 +512,7 @@ section p {
 
 .work .project-content .project-language-used ul {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     font-family: var(--font-mono);
     font-size: var(--fz-sm);
     margin-bottom: 1rem;
@@ -523,7 +526,7 @@ section p {
 
 .work .project-content .project-links {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 .work .project-content .project-links a {
@@ -574,7 +577,7 @@ section p {
 }
 
 .contact p {
-    width: 650px;
+    max-width: 650px;
     font-size: var(--fz-s);
     text-align: center;
     margin-bottom: 4rem;
