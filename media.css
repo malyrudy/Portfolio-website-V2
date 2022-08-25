@@ -64,6 +64,7 @@
     }
     .about .about-photo .green-color {
         display: none;
+        padding-bottom: 3rem;
     }
     /* EXPERIENCE */
     .my-work {
