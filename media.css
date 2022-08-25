@@ -61,10 +61,10 @@
     }
     .about .about-photo {
         margin-top: 2rem;
+        margin-bottom: 10rem;
     }
     .about .about-photo .green-color {
         display: none;
-        padding-bottom: 3rem;
     }
     /* EXPERIENCE */
     .my-work {
