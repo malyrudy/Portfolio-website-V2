@@ -286,6 +286,19 @@ section p {
     font-size: var(--fz-xs);
     color: var(--green);
     margin-bottom: 0.5rem;
+    overflow: hidden;
+    animation: type 3s steps(14);
+    white-space: nowrap;
+    border-right: 4px solid var(--green);
+    width: 15ch;
+}
+@keyframes type {
+    0% {
+        width: 0ch;;
+    }
+    100% {
+        width: 14ch;
+    }
 }
 
 .hero h2 {
@@ -466,7 +479,7 @@ section p {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     row-gap: 5rem;
 }
 
@@ -551,6 +564,10 @@ section p {
     width: 100%;
     object-fit: cover;
     border-radius: var(--border-radius);
+}
+
+.work {
+    margin-bottom: 0;
 }
 
 /* SECTION CONTACT  */
