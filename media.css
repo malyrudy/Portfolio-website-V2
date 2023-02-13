@@ -20,7 +20,7 @@
         align-items: center;
     }
     .work ul li .project-image img {
-        height: 200px;
+        max-height: 200px;
     }
 }
 
